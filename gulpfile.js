@@ -1,13 +1,13 @@
-var theme =         './sebastian';
-var parent =        './velcro';
-var styleFiles =    theme + '/scss/style.scss';
-var jsFiles =       theme + '/js/*.js';
-var projectURL =    'http://localhost/sebastian/'; // theme URL. Could be something like localhost:8888.
+var theme = './sebastian';                      // your theme name
+var parent = './velcro';                        // your parent theme name
+var styleFiles = theme + '/scss/style.scss';    // child root style.scss file location
+var jsFiles = theme + '/js/*.js';               // child root js file location
+var projectURL = 'http://localhost/sebastian/'; // project URL - needs to match your MAMP configuration.
 
 var gulp = require( 'gulp' ); // Gulp of-course
 var sass = require( 'gulp-sass' ); // Gulp pluign for Sass compilation.
 var concat = require( 'gulp-concat' ); // Concatenates JS files
-var sourcemaps = require( 'gulp-sourcemaps' ); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
+var sourcemaps = require( 'gulp-sourcemaps' ); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file
 var notify = require( 'gulp-notify' ); // Sends message notification to you
 var browserSync = require( 'browser-sync' ).create(); // Reloads browser and injects CSS. Time-saving synchronised browser testing.
 var reload = browserSync.reload; // For manual browser reload.
