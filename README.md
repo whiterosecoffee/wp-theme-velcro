@@ -71,11 +71,11 @@ If you have any errors in this step, first troubleshoot by $ npm cache clear, th
 
 4. Set project variables in gulpfile.js.  Note: Js and Scss resources will not normally change.
     
-    var theme = './sebastian';                      // your theme name
-    var parent = './core';                          // your parent theme name
-    var styleFiles = theme + '/scss/style.scss';    // child root style.scss file location
-    var jsFiles = theme + '/js/*.js';               // child root js file location
-    var projectURL = 'http://localhost/sebastian/'; // project URL - needs to match your MAMP configuration.
+var theme = './sebastian';                      // your theme name
+var parent = './core';                          // your parent theme name
+var styleFiles = theme + '/scss/style.scss';    // child root style.scss file location
+var jsFiles = theme + '/js/*.js';               // child root js file location
+var projectURL = 'http://localhost/sebastian/'; // project URL - needs to match your MAMP configuration.
 
 5.  Run Gulp and Test
 	 $ gulp watch
