@@ -70,11 +70,11 @@ Note: You should already have a vanilla WordPress install connecting to your dat
 If you have any errors in this step, first troubleshoot by $ npm cache clear, then retry OR delete your
 
 4. Set project variables in gulpfile.js.  Note: Js and Scss resources will not normally change.
-    #1  var theme = './sebastian';                      // your theme name
-    #2  var parent = './core';                          // your parent theme name
-    #3  var styleFiles = theme + '/scss/style.scss';    // child root style.scss file location
-    #4  var jsFiles = theme + '/js/*.js';               // child root js file location
-    #5  var projectURL = 'http://localhost/sebastian/'; // project URL - needs to match your MAMP configuration.
+    1  var theme = './sebastian';                      // your theme name
+    2  var parent = './core';                          // your parent theme name
+    3  var styleFiles = theme + '/scss/style.scss';    // child root style.scss file location
+    4  var jsFiles = theme + '/js/*.js';               // child root js file location
+    5  var projectURL = 'http://localhost/sebastian/'; // project URL - needs to match your MAMP configuration.
 
 5.  Run Gulp and Test
 	 $ gulp watch
