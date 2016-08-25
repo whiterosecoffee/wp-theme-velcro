@@ -1,0 +1,30 @@
+#slidesContainer div{height:100%;}//controlled by parent
+
+.dragend-container{ position:relative;}
+	.dragend-page {
+		height:100%; //control size by parent  LEAVE WIDTH ALONE
+		background-repeat: no-repeat;
+		background-position:  center center;
+	}
+
+.dragend-page.landscape	{background-size: cover;}
+.dragend-page.portrait	{background-size: contain;}
+
+#thumbsContainer{width: 100%;}
+	.dragend-thumb{background-size:cover; float:left;}
+
+@include bp(small){
+	#thumbsContainer{height:75px;}
+	.dragend-thumb{width:75px; height:75px;}
+}
+
+@include bp(afterSmall){
+	#thumbsContainer{height:100px;}
+	.dragend-thumb{width:100px; height:100px; }
+}
+
+@include bp(large){
+	#thumbsContainer{position:absolute; bottom:0; left:0;}
+
+}
+
