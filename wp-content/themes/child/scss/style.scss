@@ -1,0 +1,42 @@
+/*!
+Theme Name: Sebastian - Core Child
+Template: core
+Author: Nathan Bowman
+Version: 1.0
+*/
+
+@import "child-settings";
+@import "../../core/scss/style";
+
+//PARTIALS
+@import "partials/header";
+@import "partials/footer";
+
+//PAGES
+@import "pages/home";
+@import "pages/projects";
+@import "pages/contact";
+
+//.hide-small-screen .hide-medium-screen
+
+// scss-lint:disable SelectorFormat
+
+#menu-main {
+    @extend %mobileMenu;
+}
+
+.home #navOpenBtn.icon {color: white;}
+
+@include bp(afterSmall) {
+    //Full page background images
+    .landscape.contact #navOpenBtn.icon,
+    .landscape.services #navOpenBtn.icon,
+    .landscape.concept #navOpenBtn.icon,
+    .landscape.about-us #navOpenBtn.icon {color: white;}
+
+    .contact #foottercontent,
+    .concept #foottercontent,
+    .services #foottercontent,
+    .about-us #foottercontent { display: none; }
+}
+

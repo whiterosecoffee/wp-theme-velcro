@@ -1,0 +1,147 @@
+@-ms-viewport{width: device-width;}@viewport{width: device-width;}
+*, *::before, *::after {
+    box-sizing: inherit; //Normally inherit from <html> but chageable when specified
+}
+
+html {
+    line-height: 1;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    overflow-y: scroll;
+    min-height: 100%;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+body {
+    min-width: 320px;
+    min-height: 100%;
+    margin: 0;
+    text-rendering: optimizeLegibility;
+    position: relative;
+    background-color: $primaryBgColor;
+    color: $primaryTextColor;
+    font-family: $primaryChildFont, arial;
+
+    -webkit-animation-delay: .1s;
+    -webkit-animation-name: fontfix;
+    -webkit-animation-duration: .1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+}
+#wrapper {position: absolute; top: 0; left: 0; min-height: 100%; width: 100%;}
+
+    #content {
+        clear: both;
+        min-height: 300px;
+        @include bp(afterSmall) {
+            #content {margin: 0 auto;}
+        }
+        > :first-child {
+            margin-top: 0;
+       }
+    }
+
+    #footerOut {clear: both;}
+
+.floatfix,
+.clearfix {
+    zoom: 1;
+}
+
+.floatfix::before,
+.floatfix::after,
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+.floatfix::after,
+.clearfix::after {
+    clear: both;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.25;
+    margin: .5em 0;
+    color: $headerTextColor;
+    + * {margin-top: 0;}
+}
+
+
+p,
+#content ul {
+    margin: 0 0 1.25em;
+    line-height: 1.45;
+    letter-spacing: .065em;
+
+    :empty {
+        margin: 0;
+        -webkit-hyphens: auto;
+        -epub-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+    }
+
+    :last-child {margin-bottom: 0;}
+
+    a {text-decoration: underline;}
+}
+
+a {
+    max-width: 100%;
+    display: inline-block;
+    color: $contentLinkColor;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    img {border: 0;}
+    :focus,
+    :active,
+    :hover {
+        outline: none;
+    }
+}
+
+img, svg, object {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+img, a img {image-rendering: optimizeQuality;}
+
+strong, b {font-weight: bold;}
+blockquote {margin: 0;}
+
+embed,
+iframe,
+object,
+video {
+    max-width: 100%;
+}
+
+ul,
+dl,
+dd,
+menu {
+    margin: 0;
+    padding: 0;
+}
+.menu ul {margin: 0; padding: 0;}
+ul {list-style: none; list-style-image: none;}
+
+.specialAmp {
+    font-family: "Baskerville", "Palatino Linotype", "Palatino", "Times New Roman", serif;
+    font-style: italic;
+    font-size: 1.3em;
+    line-height: .5em;
+    font-weight: normal;
+}
+
+//Fix Chrome not rendering Google Fonts
+@-webkit-keyframes fontfix {
+    from { opacity: 1; }
+    to { opacity: 1; }
+}

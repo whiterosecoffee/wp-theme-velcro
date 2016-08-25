@@ -1,0 +1,23 @@
+/*!
+Theme Name: Core
+Description: Base Responsive Theme.
+Author: Nathan Bowman
+*/
+
+@import "mixins/mixins";
+
+@import "partials/reset";
+@import "partials/testing";
+
+@import "partials/coreFramework";
+@import "partials/coreNavigation";
+//@import "partials/coreNavigationButtons";
+
+//PLUGINS
+@import "plugins/dragend";
+@import "plugins/featherlight";
+@import "plugins/projectsCPT";
+@import "plugins/isotype";
+
+//RESORUCES
+@import "resources/icomoon";
