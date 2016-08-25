@@ -1,0 +1,26 @@
+/*!
+Theme Name: Child Theme
+Template: velcro
+Author: Nathan Bowman
+Version: 1.0
+*/
+
+@import "child-settings";
+@import "../../velcro/scss/style";
+
+//PARTIALS
+@import "partials/header";
+@import "partials/footer";
+
+//PAGES
+@import "pages/home";
+//@import "pages/about";
+//@import "pages/contact";
+
+/*
+#menu-main {
+    @extend %mobileMenu;
+}
+*/
+
+
